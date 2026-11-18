@@ -1,0 +1,4 @@
+/* Impression : masque l’application, imprime le document ou la liste */
+@media print{header,.noprint{display:none!important}body,main{background:#fff;padding:0;max-width:none}.sheet{border:0;padding:0;max-width:none}}
+#rp{display:none}
+@media print{body.rp-mode header,body.rp-mode main{display:none!important}body.rp-mode #rp{display:block}}

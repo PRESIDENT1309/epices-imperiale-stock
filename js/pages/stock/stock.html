@@ -1,0 +1,13 @@
+<div class="cur" id="st_cards"></div>
+<div class="card"><h2>État du stock</h2>
+  <div class="tools">
+    <input id="s_q" placeholder="Rechercher un article…" style="width:auto">
+    <select id="s_cat" style="width:auto"></select>
+    <label class="chk"><input type="checkbox" id="s_alert" style="width:auto"> Alertes seulement</label>
+    <button class="btn sm" id="s_print">Imprimer</button>
+    <button class="btn ghost sm" id="s_csv">Exporter CSV</button>
+    <button class="btn sm" id="s_wa" style="background:#25D366;color:#073b1c">WhatsApp</button>
+  </div>
+  <div id="s_filtre" class="filtre" hidden></div>
+  <div class="tw"><table><thead><tr><th>Article</th><th>Catégorie</th><th class="n">En stock</th><th class="n">Seuil</th><th>État</th><th></th></tr></thead><tbody id="s_tb"></tbody></table></div>
+</div>

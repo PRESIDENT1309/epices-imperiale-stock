@@ -1,0 +1,23 @@
+<div class="card"><h2 id="a_titre">Nouvel article</h2>
+  <form class="g" id="af">
+    <div><label>Nom</label><input id="a_nom" required placeholder="ex. Poivre noir en grains"></div>
+    <div><label>Catégorie</label><select id="a_cat"></select></div>
+    <div><label>Unité</label><select id="a_unite"></select></div>
+    <div><label>Seuil d’alerte</label><input type="number" id="a_seuil" min="0" step="any" value="0"></div>
+    <div class="pf"><label>Prix de vente</label><input type="number" id="a_prix" min="0" step="any"></div>
+    <div class="pf"><label>Devise</label><select id="a_dev"><option>USD</option><option>CDF</option></select></div>
+    <div id="a_init_w"><label>Stock de départ</label><input type="number" id="a_init" min="0" step="any" placeholder="facultatif"></div>
+    <div><button class="btn gold" type="submit" id="a_ok">Ajouter</button> <button class="btn ghost" type="button" id="a_cancel" hidden>Annuler</button></div>
+  </form>
+  <div id="a_compo" hidden>
+    <h2 style="margin-top:16px">Composition (pour 1 unité produite)</h2>
+    <p style="margin-top:0;color:var(--mut)">Ce qui est consommé pour fabriquer 1 produit : matière première, emballage, étiquette. La production retirera tout seul ces quantités du stock.</p>
+    <div id="a_clines"></div>
+    <button class="btn ghost sm" type="button" id="a_cadd">Ajouter un composant</button>
+  </div>
+</div>
+<div class="card">
+  <div class="tools"><select id="a_f" style="width:auto"></select><label class="chk"><input type="checkbox" id="a_arch" style="width:auto"> Voir les archivés</label>
+    <button class="btn ghost sm" id="a_csv">Exporter CSV</button> <button class="btn sm" id="a_wa" style="background:#25D366;color:#073b1c">WhatsApp</button></div>
+  <div class="tw"><table><thead><tr><th>Article</th><th>Catégorie</th><th>Unité</th><th class="n">Seuil</th><th class="n">Prix de vente</th><th></th></tr></thead><tbody id="a_tb"></tbody></table></div>
+</div>

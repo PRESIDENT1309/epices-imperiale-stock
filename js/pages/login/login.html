@@ -1,0 +1,19 @@
+<div id="login">
+<form class="card" id="lf" style="width:100%;max-width:340px;margin:0">
+<img src="assets/logo.png" alt="Épice Impériale" style="height:100px;display:block;margin:0 auto 10px">
+<label>E-mail</label><input id="l_mail" type="email" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false" required autocomplete="username">
+<label style="margin-top:8px">Mot de passe</label><input id="l_pw" type="password" autocapitalize="none" autocorrect="off" required minlength="8" autocomplete="current-password">
+<label style="display:flex;gap:8px;align-items:center;margin:8px 0 0;font-size:13px"><input type="checkbox" id="l_show" style="width:auto"> Afficher le mot de passe</label>
+<p id="lmsg" style="color:var(--out);min-height:20px;font-size:13px"></p>
+<div class="tools"><button class="btn" type="submit">Se connecter</button><button class="btn ghost" type="button" id="su">Créer un compte</button></div>
+<button class="btn ghost sm" type="button" id="forgot" style="margin-top:4px">Mot de passe oublié ?</button>
+</form>
+<form class="card" id="rf" hidden style="width:100%;max-width:340px;margin:0">
+<img src="assets/logo.png" alt="Épice Impériale" style="height:100px;display:block;margin:0 auto 10px">
+<h2>Nouveau mot de passe</h2>
+<label>Choisissez un mot de passe (8 caractères minimum)</label><input id="r_pw" type="password" autocapitalize="none" autocorrect="off" required minlength="8" autocomplete="new-password">
+<label style="display:flex;gap:8px;align-items:center;margin:8px 0 0;font-size:13px"><input type="checkbox" id="r_show" style="width:auto"> Afficher le mot de passe</label>
+<p id="rmsg" style="color:var(--out);min-height:20px;font-size:13px"></p>
+<button class="btn" type="submit">Enregistrer</button>
+</form>
+</div>

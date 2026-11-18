@@ -1,0 +1,3 @@
+/* Page Factures et reçus : lignes du formulaire */
+.lines .ln{display:grid;grid-template-columns:3fr 70px 100px 34px;gap:6px;margin-bottom:6px}
+.lines input.lie{border-color:var(--in);box-shadow:0 0 0 1px var(--in)}

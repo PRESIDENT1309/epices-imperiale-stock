@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="js/diagnostic.js"></script>
+<link rel="icon" href="assets/logo.png">
+<title>Épice Impériale — Stock</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="js/pages/login/login.css">
+<link rel="stylesheet" href="css/report.css">
+<link rel="stylesheet" href="js/pages/stock/stock.css">
+<link rel="stylesheet" href="js/pages/articles/articles.css">
+<link rel="stylesheet" href="js/pages/mouvements/mouvements.css">
+<link rel="stylesheet" href="js/pages/production/production.css">
+<link rel="stylesheet" href="js/pages/inventaire/inventaire.css">
+<link rel="stylesheet" href="js/pages/reglages/reglages.css">
+<link rel="stylesheet" href="css/print.css">
+</head>
+<body>
+<div id="login-host"></div>
+<header>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h1><img class="lg" src="assets/logo.png" alt="Épice Impériale"></h1><div style="text-align:right;font-size:12px;color:#5d6b64"><span id="who"></span><br><button class="btn ghost sm" id="out">Déconnexion</button></div></div>
+  <nav id="nav">
+      <button data-v="st" class="on">Stock</button>
+      <button data-v="art">Articles</button>
+      <button data-v="mvt">Mouvements</button>
+      <button data-v="prod">Production</button>
+      <button data-v="inv">Inventaire</button>
+      <button data-v="set">Réglages</button>
+    </nav>
+</header>
+<main>
+  <section id="st" class="on"></section>
+  <section id="art"></section>
+  <section id="mvt"></section>
+  <section id="prod"></section>
+  <section id="inv"></section>
+  <section id="set"></section>
+</main>
+<div class="sheet" id="rp"></div>
+<script src="config.js"></script>
+<script src="vendor/supabase.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

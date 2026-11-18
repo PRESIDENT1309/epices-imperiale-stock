@@ -1,0 +1,2 @@
+/* Page Articles : lignes de composition */
+.ln2{display:grid;grid-template-columns:2fr 1fr 34px;gap:6px;margin-bottom:6px}

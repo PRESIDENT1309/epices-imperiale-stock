@@ -1,0 +1,19 @@
+/* Page Stock : pastilles d’état */
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600;border:1px solid currentColor;white-space:nowrap}
+.b-ok{color:var(--in)}
+.b-bas{color:var(--gold-d)}
+.b-rupture{color:var(--out)}
+label.chk{display:flex;gap:6px;align-items:center;margin:0;color:var(--ink);font-size:14px}
+
+/* Cartes de synthèse */
+.cur{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.big{font-size:30px;font-weight:800;line-height:1.1}
+
+/* Cartes cliquables */
+.cardbtn{cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.cardbtn:hover{border-color:var(--gold)}
+.cardbtn.sel{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold)}
+.cardbtn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.names{font-size:13px;color:var(--mut);margin:6px 0 4px;line-height:1.5}
+.lnk{color:var(--out);font-weight:600;text-decoration:underline}
+.filtre{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:2px 0 10px;font-size:14px}

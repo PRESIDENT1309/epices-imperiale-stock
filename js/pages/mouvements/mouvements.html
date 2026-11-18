@@ -1,0 +1,24 @@
+<div class="card"><h2>Entrée ou sortie de stock</h2>
+  <form class="g" id="mf">
+    <div><label>Type</label><select id="m_type"><option value="entree">Entrée (+)</option><option value="sortie">Sortie (−)</option></select></div>
+    <div><label>Article</label><select id="m_art" required></select><small id="m_hint" style="color:var(--mut)"></small></div>
+    <div><label>Quantité <span id="m_unit"></span></label><input type="number" id="m_qte" min="0" step="any" required></div>
+    <div><label>Motif</label><select id="m_motif"></select></div>
+    <div><label>Date</label><input type="date" id="m_date" required></div>
+    <div><label>Fournisseur / client</label><input id="m_tiers"></div>
+    <div><label>N° de lot</label><input id="m_lot"></div>
+    <div><label>Note</label><input id="m_note"></div>
+    <div><button class="btn gold" type="submit">Enregistrer</button></div>
+  </form>
+</div>
+<div class="card"><h2>Historique</h2>
+  <div class="tools">
+    <select id="m_fa" style="width:auto"></select>
+    <select id="m_ft" style="width:auto"><option value="">Entrées et sorties</option><option value="entree">Entrées</option><option value="sortie">Sorties</option></select>
+    <input type="month" id="m_fm" style="width:auto">
+    <button class="btn sm" id="m_print">Imprimer</button>
+    <button class="btn ghost sm" id="m_csv">Exporter CSV</button>
+    <button class="btn sm" id="m_wa" style="background:#25D366;color:#073b1c">WhatsApp</button>
+  </div>
+  <div class="tw"><table><thead><tr><th>Date</th><th>Article</th><th class="n">Quantité</th><th>Motif</th><th>Détail</th><th></th></tr></thead><tbody id="m_tb"></tbody></table></div>
+</div>

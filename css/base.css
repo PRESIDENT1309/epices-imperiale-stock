@@ -1,0 +1,27 @@
+/* Couleurs, formulaires, boutons, tableaux, cartes : partagés par toutes les pages (mode clair et sombre) */
+:root{--ink:#1c2a24;--mut:#5d6b64;--bg:#f2f4f0;--card:#fff;--line:#d9dfd8;--in:#2c6e4f;--out:#a8321f;--gold:#d49a14;--gold-d:#8a6208;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e9efe9;--mut:#a9b7af;--bg:#121a16;--card:#1b2620;--line:#2e3c34;--in:#5fbf8e;--out:#ef8a78;--gold:#e7b43c;--gold-d:#e7b43c}}
+:root[data-theme="dark"]{--ink:#e9efe9;--mut:#a9b7af;--bg:#121a16;--card:#1b2620;--line:#2e3c34;--in:#5fbf8e;--out:#ef8a78;--gold:#e7b43c;--gold-d:#e7b43c}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:16px}
+h2{font-size:17px;margin:0 0 12px;font-weight:800}
+.row{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.in{color:var(--in)}.out{color:var(--out)}
+form.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;align-items:end}
+label{display:block;font-size:12px;color:var(--mut);margin-bottom:3px}
+input,select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+.btn{background:var(--ink);color:var(--bg);border:0;border-radius:6px;padding:10px 16px;font:600 14px inherit;font-family:inherit;cursor:pointer}
+.btn.gold{background:var(--gold);color:#1c2a24}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+.btn.sm{padding:5px 9px;font-size:12px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:12px;color:var(--mut);font-weight:600;border-bottom:2px solid var(--line);padding:6px}
+td{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+.empty{color:var(--mut);padding:18px 0;text-align:center}
+input::placeholder{color:var(--mut);opacity:.85}

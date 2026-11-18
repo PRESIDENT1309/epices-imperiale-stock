@@ -1,0 +1,17 @@
+  <div class="cur" id="dsum"></div>
+  <div class="card"><h2>Nouvelle dette</h2>
+    <form class="g" id="df">
+      <div><label>Sens</label><select id="e_kind"><option value="recv">On nous doit (client)</option><option value="owe">On doit (fournisseur)</option></select></div>
+      <div><label>Client / fournisseur</label><input id="e_party" required></div>
+      <div><label>Motif</label><input id="e_desc" placeholder="ex. 30 pots de piment à crédit"></div>
+      <div><label>Montant</label><input type="number" id="e_amt" step="0.01" min="0" required></div>
+      <div><label>Devise</label><select id="e_cur"><option>USD</option><option>CDF</option></select></div>
+      <div><label>Autorisée par</label><input id="e_auth" placeholder="Nom de la personne"></div>
+      <div><label>Date de remboursement</label><input type="date" id="e_due"></div>
+      <div><button class="btn gold" type="submit">Ajouter</button></div>
+    </form>
+  </div>
+  <div class="card">
+    <div class="tools"><select id="f_dk" style="width:auto"><option value="">Toutes</option><option value="recv">On nous doit</option><option value="owe">On doit</option></select> <button class="btn sm" id="pd">Imprimer</button> <button class="btn ghost sm" id="shd">Partager</button></div>
+    <div class="tw"><table><thead><tr><th>Sens</th><th>Tiers</th><th>Remboursement</th><th class="n">Montant</th><th class="n">Reste</th><th></th></tr></thead><tbody id="dtb"></tbody></table></div>
+  </div>
