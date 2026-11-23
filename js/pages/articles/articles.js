@@ -24,7 +24,7 @@ $("#a_clines").onclick=e=>{const r=e.target.dataset.r;if(r!=null){C.splice(r,1);
 function reset(){editId=null;$("#af").reset();C=[];$("#a_titre").textContent="Nouvel article";$("#a_ok").textContent="Ajouter";$("#a_cancel").hidden=true;$("#a_init_w").hidden=false;toggle()}
 $("#a_cancel").onclick=reset;
 function startEdit(id){const a=S.articles.find(x=>x.id===id);if(!a)return;
-  editId=id;$("#a_nom").value=a.nom;$("#a_cat").value=a.categorie;$("#a_unite").value=a.unite;$("#a_seuil").value=a.seuil;$("#a_prix").value=a.prix_vente??"";$("#a_dev").value=a.devise;
+  editId=id;$("#a_nom").value=a.nom;$("#a_cat").value=a.categorie;$("#a_unite").value=a.unite;$("#a_seuil").value=a.seuil;$("#a_prix").value=a.prix_vente??"";$("#a_dev").value=a.devise;$("#a_poids").value=a.poids_g??"";
   C=S.compos.filter(c=>c.produit_id===id).map(c=>({id:c.composant_id,q:c.quantite}));
   $("#a_titre").textContent="Modifier : "+a.nom;$("#a_ok").textContent="Enregistrer";$("#a_cancel").hidden=false;$("#a_init_w").hidden=true;toggle();window.scrollTo({top:0,behavior:"smooth"})}
 
@@ -35,7 +35,7 @@ async function saveCompo(pid,isProduit){
   if(rows.length){const i=await sb.from("st_composants").insert(rows);if(i.error)throw i.error}
 }
 $("#af").onsubmit=async e=>{e.preventDefault();
-  const pf=$("#a_cat").value==="produit_fini",row={nom:$("#a_nom").value.trim(),categorie:$("#a_cat").value,unite:$("#a_unite").value,seuil:+$("#a_seuil").value||0,prix_vente:pf&&$("#a_prix").value!==""?+$("#a_prix").value:null,devise:$("#a_dev").value};
+  const pf=$("#a_cat").value==="produit_fini",row={nom:$("#a_nom").value.trim(),categorie:$("#a_cat").value,unite:$("#a_unite").value,seuil:+$("#a_seuil").value||0,prix_vente:pf&&$("#a_prix").value!==""?+$("#a_prix").value:null,devise:$("#a_dev").value,poids_g:pf&&$("#a_poids").value!==""?+$("#a_poids").value:null};
   try{
     let id=editId;
     if(editId){const{error}=await sb.from("st_articles").update(row).eq("id",editId);if(error)throw error}
