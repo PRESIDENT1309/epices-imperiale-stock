@@ -7,7 +7,7 @@ même connexion, mêmes comptes, mêmes droits. Les ventes (reçus et factures) 
 - **Stock** : état de tous les articles, alertes (rupture / stock bas), impression, partage.
 - **Articles** : créer les matières premières, produits finis, emballages, étiquettes. Pour un produit fini, définir sa **composition** (ce qu’il faut pour en fabriquer 1).
 - **Mouvements** : entrées (achats…) et sorties (pertes…), historique.
-- **Production** : « j’ai fabriqué 50 sachets » → les matières, emballages et étiquettes sont retirés, les produits finis ajoutés.
+- **Production** : « j’ai fabriqué 50 sachets » → les matières, emballages et étiquettes sont retirés, les produits finis ajoutés. On saisit : quantité prévue et produite, poids par unité (g), N° de lot (proposé automatiquement), équipe ou personne, et on peut corriger la quantité **réellement utilisée** de chaque matière. L’application calcule le poids produit, la matière première utilisée, le **rendement** et la perte.
 - **Inventaire** : saisir ce qu’on a compté, l’écart corrige le stock. Fiche de comptage imprimable.
 - **Réglages** : en-tête des impressions, sauvegarde.
 
@@ -36,3 +36,6 @@ select id, 'Nom Prénom', 'admin', '{stock}' from auth.users where email = 'adre
 update public.ei_profils set modules = array_append(modules, 'stock') where id = (select id from auth.users where email = 'adresse@exemple.com');
 ```
 `{stock}` = stock seulement (aucun accès à la comptabilité). `{compta,stock}` = les deux.
+
+## Poids et rendement
+Pour qu’un produit fini propose son poids automatiquement, renseigner « Poids net par unité (g) » dans Articles. Le rendement = poids produit ÷ matière première utilisée (comptée seulement pour les matières en kg ou g). Si le poids produit dépasse la matière utilisée, un avertissement s’affiche.
